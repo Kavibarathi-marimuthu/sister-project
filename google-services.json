@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "511853998279",
+    "project_id": "muthu-e33ff",
+    "storage_bucket": "muthu-e33ff.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511853998279:android:35c2cfe5aeb8e2a81e4ee2",
+        "android_client_info": {
+          "package_name": "com.muthu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511853998279-hh8r64hcepsco278kctfu6man8rfvl2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg7r97BER3yKnLRTbItKAl3aYDDHBPphE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511853998279-hh8r64hcepsco278kctfu6man8rfvl2p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

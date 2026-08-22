@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #f7f4ef;
+    --surface: #ffffff;
+    --border: #e8e2d9;
+    --text: #1c1a17;
+    --muted: #6b6459;
+    --accent: #1a7d2e;
+    --accent-warm: #d49b0c;
+  }
+  .dark {
+    --bg: #0f1a12;
+    --surface: #1a2e1e;
+    --border: #2a3d2e;
+    --text: #f0ede8;
+    --muted: #a09484;
+    --accent: #4ab85c;
+    --accent-warm: #e6b824;
+  }
+  html { font-size: 16px; -webkit-tap-highlight-color: transparent; }
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Mukta', 'Noto Sans Tamil', system-ui, sans-serif;
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+  * { box-sizing: border-box; }
+  input, button, select, textarea { font-family: inherit; }
+  h1, h2, h3, h4 { font-family: 'Baloo 2', 'Noto Sans Tamil', system-ui, sans-serif; font-weight: 700; }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-forest-900 rounded-3xl shadow-card border border-soil-100 dark:border-forest-800 p-5 transition-all duration-200;
+  }
+  .card-hover {
+    @apply card hover:shadow-card-hover hover:-translate-y-0.5 cursor-pointer;
+  }
+  .btn-primary {
+    @apply bg-forest-600 hover:bg-forest-700 active:bg-forest-800 text-white font-semibold rounded-2xl px-6 py-3 transition-all duration-150 shadow-md hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2;
+  }
+  .btn-secondary {
+    @apply bg-wheat-100 hover:bg-wheat-200 active:bg-wheat-300 text-wheat-800 font-semibold rounded-2xl px-6 py-3 transition-all duration-150 active:scale-95 focus:outline-none focus:ring-2 focus:ring-wheat-400 focus:ring-offset-2;
+  }
+  .btn-ghost {
+    @apply bg-transparent hover:bg-forest-50 dark:hover:bg-forest-900 text-forest-700 dark:text-forest-300 font-medium rounded-2xl px-4 py-2 transition-all duration-150;
+  }
+  .input-field {
+    @apply w-full bg-soil-50 dark:bg-forest-900 border border-soil-200 dark:border-forest-700 rounded-2xl px-4 py-3 text-base text-gray-800 dark:text-gray-100 placeholder-soil-400 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-transparent transition-all;
+  }
+  .badge-green {
+    @apply inline-flex items-center gap-1 bg-leaf-100 text-leaf-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+  .badge-yellow {
+    @apply inline-flex items-center gap-1 bg-wheat-100 text-wheat-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+  .badge-red {
+    @apply inline-flex items-center gap-1 bg-red-100 text-red-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+  .badge-blue {
+    @apply inline-flex items-center gap-1 bg-sky-100 text-sky-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+  .section-title {
+    @apply text-2xl font-display font-bold text-forest-800 dark:text-forest-200;
+  }
+  .bottom-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-white dark:bg-forest-950 border-t border-soil-100 dark:border-forest-800 z-40 safe-bottom;
+  }
+  .tab-active {
+    @apply text-forest-600 dark:text-forest-400;
+  }
+  .tab-inactive {
+    @apply text-soil-400 dark:text-soil-500;
+  }
+  .organic-blob {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  .tamil-text {
+    font-family: 'Noto Sans Tamil', 'Mukta', system-ui, sans-serif;
+  }
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .pb-nav { padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* Voice waveform animation */
+.voice-bar { animation: wave 1.2s ease-in-out infinite; transform-origin: bottom; }
+.voice-bar:nth-child(1) { animation-delay: 0s; }
+.voice-bar:nth-child(2) { animation-delay: 0.1s; }
+.voice-bar:nth-child(3) { animation-delay: 0.2s; }
+.voice-bar:nth-child(4) { animation-delay: 0.3s; }
+.voice-bar:nth-child(5) { animation-delay: 0.2s; }
+.voice-bar:nth-child(6) { animation-delay: 0.1s; }
+.voice-bar:nth-child(7) { animation-delay: 0s; }
+
+/* Smooth page transitions */
+.page-enter { animation: slide-up 0.3s ease-out; }
+
+/* Gauge chart */
+.gauge-arc { stroke-linecap: round; fill: none; transition: stroke-dashoffset 1s ease-out; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c8bfb0; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #a09484; }
+
+/* Tamil large text mode */
+.large-text { font-size: 120%; }
+.large-text .section-title { font-size: 1.75rem; }
+
+/* High contrast mode */
+.high-contrast { filter: contrast(1.3); }
