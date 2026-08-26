@@ -25,6 +25,7 @@ const SchemesScreen = lazy(() => import('./components/screens/SchemesScreen'))
 const NotificationsScreen = lazy(() => import('./components/screens/NotificationsScreen'))
 const ProfileScreen = lazy(() => import('./components/screens/ProfileScreen'))
 const CommunityScreen = lazy(() => import('./components/screens/CommunityScreen'))
+const ChatScreen = lazy(() => import('./components/screens/ChatScreen'))
 
 function ProtectedRoute({ children }) {
   const { user, loading, farmerProfile } = useAuth()
@@ -72,6 +73,7 @@ export default function App() {
             <Route path="schemes" element={<SchemesScreen />} />
             <Route path="notifications" element={<NotificationsScreen />} />
             <Route path="community" element={<CommunityScreen />} />
+            <Route path="chat" element={<ChatScreen />} />
             <Route path="profile" element={<ProfileScreen />} />
           </Route>
 

@@ -24,7 +24,7 @@ app.add_middleware(
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 WEATHER_KEY = os.getenv("WEATHER_API_KEY", "")
-GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent"
+GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent"
 
 SYSTEM_PROMPT = """You are Uzhavan AI (உழவன் AI), an expert Tamil agricultural advisor.
 Reply in Tamil by default. Keep answers concise and farmer-friendly.

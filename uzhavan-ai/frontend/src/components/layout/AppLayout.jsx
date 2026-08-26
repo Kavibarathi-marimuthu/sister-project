@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   Home, Sprout, ShoppingCart, User,
   Bell, Menu, X, Sun, Moon, Globe,
-  Leaf, Cloud, Bug, TrendingUp, MapPin, Award, Users
+  Leaf, Cloud, Bug, TrendingUp, MapPin, Award, Users, MessageCircle
 } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext'
 import { useApp } from '../../contexts/AppContext'
@@ -12,11 +12,11 @@ import FloatingAssistant from '../features/VoiceAssistant'
 import { cn } from '../../lib/utils'
 
 const bottomNav = [
-  { to: '/',        icon: Home,         label: 'முகப்பு',    labelEn: 'Home'    },
-  { to: '/farm',    icon: MapPin,        label: 'வயல்',       labelEn: 'Farm'    },
-  { to: '/disease', icon: Bug,           label: 'நோய்',       labelEn: 'Disease' },
-  { to: '/market',  icon: ShoppingCart,  label: 'சந்தை',     labelEn: 'Market'  },
-  { to: '/profile', icon: User,          label: 'சுயவிவரம்', labelEn: 'Profile' },
+  { to: '/',        icon: Home,           label: 'முகப்பு',    labelEn: 'Home'    },
+  { to: '/farm',    icon: MapPin,         label: 'வயல்',       labelEn: 'Farm'    },
+  { to: '/chat',    icon: MessageCircle,  label: 'AI சாட்',   labelEn: 'AI Chat' },
+  { to: '/disease', icon: Bug,            label: 'நோய்',       labelEn: 'Disease' },
+  { to: '/market',  icon: ShoppingCart,   label: 'சந்தை',     labelEn: 'Market'  },
 ]
 
 const sideNav = [
@@ -37,6 +37,7 @@ const sideNav = [
     { to: '/market', icon: ShoppingCart, label: 'சந்தை விலை', labelEn: 'Market Prices' },
     { to: '/schemes', icon: Award, label: 'அரசு திட்டங்கள்', labelEn: 'Govt Schemes' },
     { to: '/community', icon: Users, label: 'சமூகம்', labelEn: 'Community' },
+    { to: '/chat', icon: MessageCircle, label: 'AI சாட்பாட்', labelEn: 'AI Chatbot' },
   ]},
   { section: 'கணக்கு', items: [
     { to: '/notifications', icon: Bell, label: 'அறிவிப்புகள்', labelEn: 'Notifications' },

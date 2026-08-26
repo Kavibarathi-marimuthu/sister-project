@@ -1,12 +1,12 @@
 /**
  * Gemini REST client — no npm package needed, pure fetch.
- * Model: gemini-3.5-flash  (available on free tier for this key)
- * Endpoint: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent
+ * Model: gemini-3.6-flash  (confirmed working)
+ * Endpoint: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent
  */
 
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || ''
 const GEMINI_ENDPOINT =
-  'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent'
+  'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent'
 
 const SYSTEM_PROMPT = `You are Uzhavan AI (உழவன் AI), an expert Tamil agricultural advisor.
 Your role: help Tamil farmers with crop selection, soil health, weather-based decisions, disease diagnosis, market prices, government schemes, and farm profitability — covering the full cycle from seed to sale.
