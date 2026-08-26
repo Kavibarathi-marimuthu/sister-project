@@ -1,3 +1,7 @@
 frontend/.env.local
 
-frontend/package-lock.json
+# Dependencies — never commit node_modules
+frontend/node_modules/
+
+# Keep the lockfile so Vercel can use npm ci
+
